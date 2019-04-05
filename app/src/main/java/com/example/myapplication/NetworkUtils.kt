@@ -9,13 +9,13 @@ import java.net.URL
 import java.util.*
 
 
-class NetworkUtility(){
+class NetworkUtils(){
 
     val MOVIES_API_BASEURL: String = "http://www.omdbapi.com/"
 
     val TOKEN_API: String = "800fbdcb"
 
-    fun buildUrl(): URL {
+    fun buildUrl(movieName: String): URL {
         val builtUri = Uri.parse(MOVIES_API_BASEURL)
             .buildUpon()
         .appendQueryParameter("apikey", TOKEN_API)
